@@ -1,0 +1,41 @@
+valir.admin:
+  path: '/admin/config/valir'
+  defaults:
+    _form: '\Drupal\valir\Form\ValirAdminForm'
+    _title: 'Valir Settings'
+  options:
+    _admin_route: 'TRUE'
+  requirements:
+    _permission: 'administer valir'
+  weight: 10
+
+valir.hello_valir_1:
+  path: '/hello-velir-1'
+  defaults:
+    _title: 'Hello Valir 1'
+    _controller: '\Drupal\valir\Controller\ValirController::helloValir1'
+  requirements:
+    _access: 'TRUE'
+  options:
+    no_cache: 'TRUE'
+
+valir.hello_valir_2:
+  path: '/hello-velir-2'
+  defaults:
+    _title: 'Hello Valir 2'
+    _controller: '\Drupal\valir\Controller\ValirController::helloValir2'
+    _format: json
+  requirements:
+    _access: 'TRUE'
+  options:
+    no_cache: 'TRUE'
+
+valir.hello_valir_3:
+  path: '/hello-velir-3'
+  defaults:
+    _title: 'Hello Valir 3'
+    _controller: '\Drupal\valir\Controller\ValirController::helloValir3'
+  requirements:
+    _permission: 'administer valir'
+  options:
+    no_cache: 'TRUE'

@@ -1,0 +1,20 @@
+uuid: 3c24ecf0-fd4a-4793-9c2d-9ebfa9cde947
+langcode: en
+status: true
+dependencies:
+  module:
+    - valir
+  theme:
+    - bartik
+id: valirlogin
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: valir_login
+settings:
+  id: valir_login
+  label: 'Valir Login'
+  provider: valir
+  label_display: visible
+visibility: {  }

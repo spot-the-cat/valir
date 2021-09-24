@@ -1,0 +1,6 @@
+services:
+  krypt.twig:
+    arguments: ['@renderer']
+    class: Drupal\krypt\Twig\KryptExtension
+    tags:
+      - { name: twig.extension }

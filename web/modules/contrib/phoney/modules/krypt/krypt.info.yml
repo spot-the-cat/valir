@@ -1,0 +1,11 @@
+name: krypt
+type: module
+description: 'The krypt function for twig'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: Twig
+
+# Information added by Drupal.org packaging script on 2021-08-28
+version: '1.0.1'
+project: 'phoney'
+datestamp: 1630134257

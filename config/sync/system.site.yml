@@ -1,0 +1,14 @@
+uuid: fc713fb7-d80a-4c0c-b3c5-dee7f550ea9c
+name: Valir
+mail: bill@williamakelly.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

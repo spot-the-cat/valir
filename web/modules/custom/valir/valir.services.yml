@@ -1,0 +1,6 @@
+services:
+  valir.node_entity:
+    class: Drupal\valir\Normalizer\ValirEntityNormalizer
+    arguments: ['@entity_type.manager', '@entity_type.repository', '@entity_field.manager']
+    tags:
+      - { name: normalizer, priority: 8 }

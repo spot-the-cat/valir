@@ -1,0 +1,6 @@
+valir.admin:
+  title: 'Valir Config'
+  description: 'Valir config.'
+  base_route: valir.admin
+  parent: system.admin_config
+  route_name: valir.admin

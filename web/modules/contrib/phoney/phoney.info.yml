@@ -1,0 +1,14 @@
+name: 'Phoney'
+type: module
+description: 'Twig Template to obfuscate a <code>field_phone</code>.'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: Fields
+dependencies:
+  - phoney:krypt
+  - drupal:field
+
+# Information added by Drupal.org packaging script on 2021-08-28
+version: '1.0.1'
+project: 'phoney'
+datestamp: 1630134257

@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Contains valir.module.
+ */
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Routing\CurrentRouteMatch;
+
+/**
+ * Implements hook_help().
+ */
+function valir_help($route_name, CurrentRouteMatch $route_match) {
+  $x = [
+    '```php' => '<code>',
+    '```'    => '</code>',
+    "\n"     => "\n<br />",
+  ];
+  switch ($route_name) {
+    case 'help.page.valir':
+      $txt = file_get_contents(drupal_get_path('module', 'valir') . '/README.md');
+      return str_replace(array_keys($x), array_values($x), Html::escape($txt));
+  }
+  return '';
+}
+
+/**
+ * Implements hook_permission().
+ */
+function valir_permission() {
+  return [
+    'administer valir' => [
+      'title'       => t('Administer the Valir Module'),
+      'description' => t('Perform administration tasks for the valir module.'),
+    ],
+  ];
+}
+

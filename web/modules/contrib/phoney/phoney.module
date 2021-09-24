@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * The phoney module.
+ */
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Routing\CurrentRouteMatch;
+
+/**
+ * Implements hook_help().
+ */
+function phoney_help($route_name, CurrentRouteMatch $route_match) {
+  $x = [
+    '```php' => '<code>',
+    '```'    => '</code>',
+    "\n"     => "\n<br />",
+  ];
+  switch ($route_name) {
+    case 'help.page.phoney':
+      $txt = file_get_contents(drupal_get_path('module', 'phoney') . '/README.md');
+      return str_replace(array_keys($x), array_values($x), Html::escape($txt));
+  }
+  return '';
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function phoney_page_attachments_alter(&$page) {
+  $page['#attached']['library'][] = 'phoney/default';
+}

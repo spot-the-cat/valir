@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Contains valir.install.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function valir_schema() {
+  return [];
+}
+
+/**
+ * Implements hook_update_8XXX().
+ */
+function valir_update_8000() {
+  drupal_flush_all_caches();
+}
